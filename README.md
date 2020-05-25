@@ -10,11 +10,11 @@ sudo apt-get install build-essential libsodium-dev libboost-system-dev
 ````javascript
 var bhv = require('bindings')('beamhashverify.node');
 
-var version = 2; //Will use BeamHashII
+var version = 2; //use BeamHashII
 var header = new Buffer(..., 'hex');
 var solution = new Buffer(..., 'hex'); //do not include byte size preamble "fd4005"
 
-bhv.verify(header, nonce, solution, version); //Omitting version will default to BeamHashIII
+bhv.verify(header, nonce, solution, version); //omitting version will default to BeamHashIII
 //returns boolean
 ````
 
