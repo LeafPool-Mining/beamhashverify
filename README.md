@@ -12,6 +12,7 @@ var bhv = require('bindings')('beamhashverify.node');
 
 var version = 2; //use BeamHashII
 var header = new Buffer(..., 'hex');
+var nonce = new Buffer(..., 'hex');
 var solution = new Buffer(..., 'hex'); //do not include byte size preamble "fd4005"
 
 bhv.verify(header, nonce, solution, version); //omitting version will default to BeamHashIII
